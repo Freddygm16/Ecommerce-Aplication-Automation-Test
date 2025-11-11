@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	<listeners>
+		<listener
+			class-name="freddycomapany.ecommerceaplication.TestsComponents.Listeners" />
+	</listeners>
+
+	<test thread-count="5" name="Summit Order">
+		<classes>
+			<class name="freddycomapany.ecommerceaplication.Tests.BuyPath" />
+		</classes>
+	</test> <!--
+	testing -->
+
+	<test thread-count="5" name="Errors Validation">
+		<classes>
+			<class
+				name="freddycomapany.ecommerceaplication.Tests.ErrorValidation" />
+		</classes>
+	</test>
+</suite> <!--
+Suite -->

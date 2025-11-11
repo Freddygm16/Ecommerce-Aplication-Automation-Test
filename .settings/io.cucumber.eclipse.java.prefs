@@ -1,0 +1,6 @@
+activeFilters=com.aventstack.extentreports.gherkin.*,com.aventstack.extentreports.gherkin.model.*,io.cucumber.core.gherkin.*,io.cucumber.core.gherkin.messages.*,io.cucumber.gherkin.*
+eclipse.preferences.version=1
+enableProjectSpecific=true
+enableShowHook=false
+inactiveFilters=
+validationPlugins=io.cucumber.messages.types.GherkinDocument

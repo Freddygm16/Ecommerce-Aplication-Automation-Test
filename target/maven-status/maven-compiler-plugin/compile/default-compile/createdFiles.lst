@@ -1,0 +1,8 @@
+freddycomapany\ecommerceaplication\PageObjects\CardPage.class
+freddycomapany\ecommerceaplication\PageObjects\ProductCatalogue.class
+freddycomapany\ecommerceaplication\Resources\ExtentReportNG.class
+freddycomapany\ecommerceaplication\PageObjects\LandingPage.class
+freddycomapany\ecommerceaplication\AbstractComponents\AbstractComponents.class
+freddycomapany\ecommerceaplication\PageObjects\CheckOutPage.class
+freddycomapany\ecommerceaplication\PageObjects\OrderPage.class
+freddycomapany\ecommerceaplication\PageObjects\RegisterPage.class
