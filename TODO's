@@ -107,8 +107,20 @@
 	 28.5 Create testNGTestRunner class file, and configurate. (Check)
 	 28.7 Create a new feature file with scenario that verify login error validation and use extention to create methods of java text class. (Check)
 	 28.6 Add Tags regression and regression. (Check)
-	 28.8 Create a profile with "**/" route in pom.xml
+	 28.8 Create a profile with "**/" route in pom.xml  (Check)
 	   
+    29- Configure and upload to github repositories.  (Check)
+	
+    30- Configure jenkins to implment CI/CD
+	 30.1 Clean jenkins installation  (Check)
+	 30.2 Install jenkins with java war command line  (Check)
+	 30.3 Install Maben Integration plugin in jenkins  (Check)
+	 30.4 Create new job with new maven project template 
+	 30.5 Provide the code by github reposytories and create tokken screct key
+	 30.6 Active GitHub Hook triggerfor GITScm polling 
+	 30.7 Configure Mave_Home in jenkins and put in "Name" input the maven versión
+	 30.8 Configure payloadurl provide by Jenkis (In system configuration)
+	 30.9 Install Ngork and configure tunel to use in gihub payload url
 	  
 	  
 	  
