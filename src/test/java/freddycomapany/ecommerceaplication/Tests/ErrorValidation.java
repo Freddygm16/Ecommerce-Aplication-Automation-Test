@@ -17,7 +17,7 @@ public class ErrorValidation extends BaseTest{
 		getLandingPageManager().login("ADSA@asdasd.com", "123314");
 	//	Thread.sleep(5000); //IF dont wait the correct time appear exception dont|
 	    String text = getLandingPageManager().getFailedLoginMessajes();
-		Assert.assertEquals(text, "Incorrect email or passwod.");
+		Assert.assertEquals(text, "Incorrect email or password.");
 	}
 	
 	@Test
