@@ -15,7 +15,7 @@ public class ErrorValidation extends BaseTest{
 	@Test(groups = "ErrorValidationTest", retryAnalyzer = Retry.class)
 	public void validationLoginFailed() throws InterruptedException, IOException {
 		getLandingPageManager().login("ADSA@asdasd.com", "123314");
-	//	Thread.sleep(5000); //IF dont wait the correct time appear exception dont| -----
+	//	Thread.sleep(5000); //IF dont wait the correct time appear exception dont| -------
 	    String text = getLandingPageManager().getFailedLoginMessajes();
 		Assert.assertEquals(text, "Incorrect email or password.");
 	}
