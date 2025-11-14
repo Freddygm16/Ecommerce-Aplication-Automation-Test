@@ -1,0 +1,4 @@
+- Create three classes with meaningful names (e.g., PSName) and apply inheritance.
+- Extend reusable and use methods in the child class, for example with tags @BeforeMethod and After .
+- Create objects and use their functionality through another inherited object.
+- Implement the super function to invoke the parent constructor when it's not explicitly called outside the class.

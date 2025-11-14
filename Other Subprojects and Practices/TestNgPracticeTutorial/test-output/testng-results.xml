@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-29T18:16:39 CST" name="Suite" finished-at="2025-09-29T18:16:39 CST" duration-ms="110">
+    <groups>
+    </groups>
+    <test started-at="2025-09-29T18:16:39 CST" name="Test" finished-at="2025-09-29T18:16:39 CST" duration-ms="110">
+      <class name="test.Practice2">
+        <test-method signature="Practice2CoursePage()[pri:0, instance:test.Practice2@77847718]" started-at="2025-09-29T18:16:39 CST" name="Practice2CoursePage" finished-at="2025-09-29T18:16:39 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice2CoursePage -->
+        <test-method signature="Practice2HomePage()[pri:0, instance:test.Practice2@77847718]" started-at="2025-09-29T18:16:39 CST" name="Practice2HomePage" finished-at="2025-09-29T18:16:39 CST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice2HomePage -->
+      </class> <!-- test.Practice2 -->
+      <class name="test.Practice3">
+        <test-method signature="Practice2Api()[pri:0, instance:test.Practice3@7f3b84b8]" started-at="2025-09-29T18:16:39 CST" name="Practice2Api" finished-at="2025-09-29T18:16:39 CST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice2Api -->
+        <test-method signature="Practice3Mobile()[pri:0, instance:test.Practice3@7f3b84b8]" started-at="2025-09-29T18:16:39 CST" name="Practice3Mobile" finished-at="2025-09-29T18:16:39 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice3Mobile -->
+        <test-method signature="Practice3WebPage()[pri:0, instance:test.Practice3@7f3b84b8]" started-at="2025-09-29T18:16:39 CST" name="Practice3WebPage" finished-at="2025-09-29T18:16:39 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice3WebPage -->
+      </class> <!-- test.Practice3 -->
+      <class name="test.Practice4">
+        <test-method signature="Practice4Api()[pri:0, instance:test.Practice4@57a3af25]" started-at="2025-09-29T18:16:39 CST" name="Practice4Api" finished-at="2025-09-29T18:16:39 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice4Api -->
+        <test-method signature="Practice4Api2()[pri:0, instance:test.Practice4@57a3af25]" started-at="2025-09-29T18:16:39 CST" name="Practice4Api2" finished-at="2025-09-29T18:16:39 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice4Api2 -->
+        <test-method signature="Practice4Api3()[pri:0, instance:test.Practice4@57a3af25]" started-at="2025-09-29T18:16:39 CST" name="Practice4Api3" finished-at="2025-09-29T18:16:39 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice4Api3 -->
+      </class> <!-- test.Practice4 -->
+      <class name="test.PracticeOne">
+        <test-method signature="Practice1RegisterPage()[pri:0, instance:test.PracticeOne@223d2c72]" started-at="2025-09-29T18:16:39 CST" name="Practice1RegisterPage" finished-at="2025-09-29T18:16:39 CST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice1RegisterPage -->
+        <test-method signature="Practice1authPage()[pri:0, instance:test.PracticeOne@223d2c72]" started-at="2025-09-29T18:16:39 CST" name="Practice1authPage" finished-at="2025-09-29T18:16:39 CST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice1authPage -->
+        <test-method signature="Practice1loginPage()[pri:0, instance:test.PracticeOne@223d2c72]" started-at="2025-09-29T18:16:39 CST" name="Practice1loginPage" finished-at="2025-09-29T18:16:39 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Practice1loginPage -->
+      </class> <!-- test.PracticeOne -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

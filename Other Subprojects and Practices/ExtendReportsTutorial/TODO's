@@ -1,0 +1,7 @@
+TODO's
+
+1- Create a new project with package ExtendReports (Check)
+2- Shared the dependency Extend Reports and put in pom.xml. (Check)
+3- Create a test initial demo and beforetest config().
+4- Configure the reporter in config method
+5- Create a test and use extent report.

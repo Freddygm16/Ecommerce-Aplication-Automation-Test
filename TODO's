@@ -1,129 +1,137 @@
-/* TODO: Create a Maven project and initialize an end-to-end test automation framework.
-	 		1 - Register a user. (check)
-	 		2 - Login in the page with register user (check)
-	 		3 - Add a "ZARA COAT 3" product to the cart using stream findFirst and orElse (check)
-	 		4 - Use Explicit wait to wait until disappear loading icon and message success (check)
-	 		5 - Then make a click in the card button to navigate in the card section (check)
-		    6 - With Streams match if the "ZARA COAT 3" product is present in the card use function like anyMatch to return boolean and assertTrue (check)
-		    7 - Click in "Check Out" button. (check)
-		    8 - With Actions object send keys "Cost" to suggestion dropdown. (check)
-		    7 - Then, implement explicit wait to continue until the suggestions appear. (check)
-		    8 - Select with xpath selector the option, if have many options choose only one with "()[]" syntax. (check)
-		    7 - Click in "PLACE ORDER" option. (check)
-		    8 - Finally, use assertion to validate the text successful is present in the last page and close the browser (check)
-	
-	 
-	 *	   1- Create Abstract component class to manage reusable code. (check)
-	 *	   2- Extend to both Page Object Classes. (check)
-	 *	   2- Create method name's "waitElementsAppear" to put explicit wait functionality in abstract class. (check)
-	 *	   3- Pass the driver with super keyword to parent. (check)
-	 *	   4- Create a method name's getProductsList in ProductList catalogue and implement waitElementsAppear method in this. (check)
-	 *	   5- Create a method name's getProductByName in ProductList catalogue and implement getProductsList methods in this. (check)
-	 *     6- Create method name's "waitElementsDisappear" to put explicit wait functionality in abstract class. (check)
-	 *     7- Create a method name's AddProductToCart in ProductList catalogue and implement getProductByName, waitElementsDisappear methods in this. (check)
-	 *	   8- Add goToCart method in abstract class, because is part of reusable component like header. (check)
-	 *	   9- Create a CardPage class and add method migrate or checkout functionality that names could be: verifyProductDisplay, goToCheckOut (check)
-	 *	  10- Create POM of CheckOutPage, analyze reusable code, and reusable methods in the same class. (check)
-     *    11- Convert the declaration of all POM object in return statement, to agile the functionality.
-	 */
-	 
+Create a Maven project and initialize an end-to-end test automation framework.
+
 	 
 	 TODO's:
 	 
-	 1- Create a new package to save reusable test components, example: test configurations, dynamic initializations. (check)
+	 1 - Register a user. (check)
+	 2 - Login in the page with registered user. (check)
+	 3 - Add a "ZARA COAT 3" product to the cart using stream findFirst and orElse. (check)
+	 4 - Use Explicit wait to wait until the loading icon and success message disappear. (check)
+	 5 - Then click the cart button to navigate to the cart section. (check)
+	 6 - With Streams, match if the "ZARA COAT 3" product is present in the cart using a function like anyMatch to return boolean and assertTrue. (check)
+	 7 - Click the "Check Out" button. (check)
+	 8 - With Actions object send keys "Cost" to the suggestion dropdown. (check)
+	 7 - Then, implement explicit wait to continue until the suggestions appear. (check)
+	 8 - Select with xpath selector the option; if there are many options choose only one with "()[]" syntax. (check)
+	 7 - Click the "PLACE ORDER" option. (check)
+	 8 - Finally, use an assertion to validate that the success text is present on the last page and close the browser. (check)
+	
+	 1- Create Abstract component class to manage reusable code. (check)
+	 2- Extend to both Page Object Classes. (check)
+	 2- Create method named "waitElementsAppear" to put explicit wait functionality in abstract class. (check)
+	 3- Pass the driver with super keyword to parent. (check)
+	 4- Create a method named getProductsList in ProductList catalogue and implement waitElementsAppear method in this. (check)
+	 5- Create a method named getProductByName in ProductList catalogue and implement getProductsList methods in this. (check)
+	 6- Create method named "waitElementsDisappear" to put explicit wait functionality in abstract class. (check)
+	 7- Create method named AddProductToCart in ProductList catalogue and implement getProductByName, waitElementsDisappear methods in this. (check)
+	 8- Add goToCart method in abstract class, because it is part of reusable components like header. (check)
+	 9- Create a CardPage class and add method migrate or checkout functionality that names could be: verifyProductDisplay, goToCheckOut. (check)
+	 10- Create POM of CheckOutPage, analyze reusable code, and reusable methods in the same class. (check)
+     11- Convert the declaration of all POM objects in return statements to make the functionality agile.
+	 
+	 
+	 1- Create a new package to save reusable test components, for example: test configurations, dynamic initializations. (check)
 	 2- In testComponents package create a BaseTest class to save all configuration. (check)
 	 3- Rename the package that saves all tests to ".test" at the end. (check)
-	 3- In java main folder create a new package name's "resources" to save all global variables. (check)
-	 4- Create a global variable name's "browser" in GlobalData.properties file (I must create this first)
-	    to save the driver of browser we should use, and make the process dynamically without changing a lot piece of code. (check)
+	 3- In java main folder create a new package named "resources" to save all global variables. (check)
+	 4- Create a global variable named "browser" in GlobalData.properties file (I must create this first)
+	    to save the driver of browser we should use, and make the process dynamic without changing many pieces of code. (check)
 	 5- Implement in baseTest the initial dynamic configuration of the browser. (check)
-	 6- Create a method goTo to make "driver.get" method dynamically. (check)
+	 6- Create a method goTo to make "driver.get" method dynamic. (check)
 	 7- Create launchApplication method to initialize application and return Landing Page Object. (check)
 	 9- Extend baseTest to BuyPath test and implement the new modifications. (check)
 	 10- Implement in baseTest Before annotation in launchApplication. (check)
 	 11- Implement in baseTest After annotation to close the browser. (check)
-	 12- Implement a new test to validate message error in login. (check)
+	 12- Implement a new test to validate error message in login. (check)
 	 13- Add the method to validate the product is in the cart to errorValidations class since the functionality verifies 
-	     the errors and it related with class category is othrwise to order the code. (check)
-	 14- Create test.xml and configure two tests one with submitOrder test and another with errorValidations tests in new folder name´s "testSuites".  (check)
-	 13- Create in class AbstractComponents the method goToOrderHistory.  (check)
+	     the errors and it is related with class category; otherwise order the code. (check)
+	 14- Create test.xml and configure two tests, one with submitOrder test and another with errorValidations tests in new folder named "testSuites". (check)
+	 13- Create in class AbstractComponents the method goToOrderHistory. (check)
 	 14- Create the POM class OrderPage and method validateTheProductElementIsDisplayed. (check)
 	 15- With tag dependsOnMethods create a test orderHistoryTest to validate the order is correctly submitted in the history, 
 	     the tag is necessary since the submit order first is necessary to view in the history. (check)
-	 16- Run both tests errorValidations and buyPath parallel. (check)
- 	 17- Group the tests with "errorHandleValidation" and create and testing.xml to test this (If one use dependsonMethod, use alwaysrun attribute).(check) 
-	 18- Create return with annotation @dataprovider that use only one line within the method and group the execution of summitOrder in tag "Purchase".(check) 
-	 19- Convert the return data give by dataprovider in HashMAp. (check)
-	 21- Create a package name's "data" in test packages.(check)
-	 21- Create a JSON map with access credential.(check)
-	 22- Create a class DataRreade with method getJsonDataToMap (Rememender to fix depreciated error put standat UTF-8 in the second argument of readFileToString) (check)
-	 23- Copy the "getJsonDataToMap" to BaseTest class to use in test BuyPath within Inherance trorugt the parent and pass url to locate json file by paramter (check)
-	 24- Create in basetest getScreshot method and receive how parameter TesCaseNae this to take a screenchots when the test failes and save this in new repórts folder create. (check)
-	 25- Return the path of imagen save.
+	 16- Run both tests errorValidations and buyPath in parallel. (check)
+ 	 17- Group the tests with "errorHandleValidation" and create and testing.xml to test this (If one uses dependsOnMethod, use alwaysRun attribute). (check) 
+	 18- Create return with annotation @DataProvider that uses only one line within the method and group the execution of submitOrder in tag "Purchase". (check) 
+	 19- Convert the return data given by DataProvider into HashMap. (check)
+	 21- Create a package named "data" in test packages. (check)
+	 21- Create a JSON map with access credentials. (check)
+	 22- Create a class DataReader with method getJsonDataToMap (Remember to fix deprecated error; put standard UTF-8 in the second argument of readFileToString). (check)
+	 23- Copy the "getJsonDataToMap" to BaseTest class to use in test BuyPath within inheritance through the parent and pass URL to locate JSON file by parameter. (check)
+	 24- Create in baseTest getScreenshot method and receive as parameter TestCaseName to take screenshots when the test fails and save this in new reports folder created. (check)
+	 25- Return the path of image saved.
 	 
 	 
 	 
-	 25- Implement ExtendReports functionality
-	  25.1- Implement all dependecies needed.
-	  25.2- Create a new class in resources package name's "ExtentReportNG" with method "getReportedObject".(check)
-	  25.3- Create class listener and inherancy "ITTestListener" in testcomponets to implements globally ExtetReports.(check)
-	  25.4- Extend to class Listeners the baseTest class to implment method name's "getScreenShot".  (check)
-	  25-5- Implement method "onStart" method to initialize the test with extent.createTest.(check)
-	  25.6- Implement method "onTestSuccess", to create log whit pass status.(check)
-	  25.7- Implement method "onTestFailure" to mark fail thes and get the error with result object.(check)
-	  25.7- Send the driver of the test (method) to "onTestFailure" method.(check)
-	  25.8- Take a screenshot in the moment when the test failed.(check)
-	  25.9- Fix the concurrency inssues in parrallel testint with ThreadLocal interface.(Check)
-	26- Implement Retry analyzer interface, to detect falky fails.(Check)
-	  26.1- Create a Retry object a implement interface ITestRetry with variables count and maxRetry.(Check)
-	  26.2- Implemnet Retryanalizer attribute.(Check)
+	 25- Implement ExtentReports functionality
+	  25.1- Implement all dependencies needed.
+	  25.2- Create a new class in resources package named "ExtentReportNG" with method "getReportedObject". (check)
+	  25.3- Create class listener and inherit "ITestListener" in testComponents to implement globally ExtentReports. (check)
+	  25.4- Extend to class Listeners the baseTest class to implement method named "getScreenshot". (check)
+	  25.5- Implement "onStart" method to initialize the test with extent.createTest. (check)
+	  25.6- Implement "onTestSuccess" method to create log with pass status. (check)
+	  25.7- Implement "onTestFailure" method to mark failed tests and get the error with result object. (check)
+	  25.7- Send the driver of the test (method) to "onTestFailure" method. (check)
+	  25.8- Take a screenshot at the moment when the test failed. (check)
+	  25.9- Fix concurrency issues in parallel testing with ThreadLocal interface. (check)
+	26- Implement RetryAnalyzer interface to detect flaky fails. (check)
+	  26.1- Create a Retry object and implement interface ITestRetry with variables count and maxRetry. (check)
+	  26.2- Implement RetryAnalyzer attribute. (check)
 	  
 	  
-	 26- Execute text with cmd:
-	  26.1 Configurate a maven in global scope. (Check)
-	  26.2 Configurate profile and plugin in pom.xml. (Check)
-	  26.3 Configurate a profile to all test.xml.(Check)
-	  26.4 Change the versión of tje maven compiler and source to 1.8, since we avoid compatibilty issues. (Check)
-	  26.5 Execute command: MVN test -P{profile} (Check)
-	  25.6 Configurate in base test at the method to initilize driver the logical to manageed global sytem variables send by maven commands (-D)
-	  		and managed project variable in the file ".properties" (Check)
+	26- Execute test with cmd:
+	  26.1 Configure maven in global scope. (check)
+	  26.2 Configure profile and plugin in pom.xml. (check)
+	  26.3 Configure a profile for all test.xml. (check)
+	  26.4 Change the version of the maven compiler and source to 1.8, since we avoid compatibility issues. (check)
+	  26.5 Execute command: MVN test -P{profile}. (check)
+	  25.6 Configure in base test at the method to initialize driver the logic to manage global system variables sent by maven commands (-D)
+	  		and manage project variables in the file ".properties". (check)
 	
 	27- Install Jenkins Server
-	 27.1 Dowload generic java package in the official jenkins page dowloda  (Check)
-	 27.2 Execute ".war" dowloaded with comand java -jar jenkins.war and in the same commad add httpPort=9090 ti star jenkins uin the local server  (Check)
-	 27.3 Enter tothe local server and load jenkins (localhost::9090)  (Check)
-	 27.4 Configurete a execute a jobs, that run the test in maven project.  (Check)
-	 27.5 Enable parametrization and add parameters in configuration of jobs, and maven command past in buil configuration option in the job, execute jobs. (Check)
-	 27.6 configurate headless mode with chrome browares and ChromeOptions class, to achieve this implement parametrization adding headless in the browaser golabl variable. (Check)
-	 27.7 Important to avoid inssue or flaky fails set dimension to to the driver since when we execute i haedlessmode the windows donest exist makein the maximaxze fction doest work since this works with exit windows (Check)
-	 27.8 Schedule a jobs that execute every day at 3 pm. (Check)
+	 27.1 Download generic java package on the official Jenkins page download. (check)
+	 27.2 Execute ".war" downloaded with command java -jar jenkins.war and in the same command add httpPort=9090 to start Jenkins in the local server. (check)
+	 27.3 Enter to the local server and load Jenkins (localhost::9090). (check)
+	 27.4 Configure and execute a job that runs the test in maven project. (check)
+	 27.5 Enable parametrization and add parameters in configuration of jobs, and maven command paste in build configuration option in the job, execute jobs. (check)
+	 27.6 Configure headless mode with chrome browser and ChromeOptions class; to achieve this, implement parametrization adding headless in the browser global variable. (check)
+	 27.7 Important to avoid issues or flaky fails: set dimension to the driver since when we execute in headless mode the window doesn’t exist, making the maximize function not work since this works with existing windows. (check)
+	 27.8 Schedule a job that executes every day at 3 pm. (check)
 	 
 	 
 	28- Install cucumber framework
-	 28.1 Sheard and put the dependecies of "cucumber-java" and "cucumber" in pom.xml (Check)
-	 28.2 Create a package cucumber and create feature file that approach checkout process, create feature an scenarios with scenarios outline keyword, and use example keyword and backgroud. (Gherkins sintaxis) (Check)
-	 28.3 Create a step definition using new package name's "StepDefinitions" and create new java class StepDefinition implementation.(Check)
-	 28.4 Create methods to bind each step definition in .feature file.(Check)
-	 28.5 Create testNGTestRunner class file, and configurate. (Check)
-	 28.7 Create a new feature file with scenario that verify login error validation and use extention to create methods of java text class. (Check)
-	 28.6 Add Tags regression and regression. (Check)
-	 28.8 Create a profile with "**/" route in pom.xml  (Check)
+	 28.1 Share and put the dependencies of "cucumber-java" and "cucumber" in pom.xml. (check)
+	 28.2 Create a package cucumber and create feature file that approaches checkout process, create feature and scenarios with Scenario Outline keyword, and use Example keyword and Background. (Gherkin syntax). (check)
+	 28.3 Create a step definition using new package named "StepDefinitions" and create new java class StepDefinition implementation. (check)
+	 28.4 Create methods to bind each step definition in .feature file. (check)
+	 28.5 Create TestNGTestRunner class file, and configure. (check)
+	 28.7 Create a new feature file with scenario that verifies login error validation and use extension to create methods of java test class. (check)
+	 28.6 Add Tags regression and smoke. (check)
+	 28.8 Create a profile with "**/" route in pom.xml. (check)
 	   
-    29- Configure and upload to github repositories.  (Check)
+    29- Configure and upload to GitHub repositories. (check)
 	
-    30- Configure jenkins to implment CI/CD
-	 30.1 Clean jenkins installation  (Check)
-	 30.2 Install jenkins with java war command line  (Check)
-	 30.3 Install Maben Integration plugin in jenkins  (Check)
-	 30.4 Create new job with new maven project template 
-	 30.5 Provide the code by github reposytories and create tokken screct key
-	 30.6 Active GitHub Hook triggerfor GITScm polling 
-	 30.7 Configure Mave_Home in jenkins and put in "Name" input the maven versión
-	 30.8 Configure payloadurl provide by Jenkis (In system configuration)
-	 30.9 Install Ngork and configure tunel to use in gihub payload url
-	  
-	  
-	  
-	  
+    30- Configure Jenkins to implement CI/CD
+	 30.1 Clean Jenkins installation. (check)
+	 30.2 Install Jenkins with java war command line. (check)
+	 30.3 Install Maven Integration plugin in Jenkins. (check)
+	 30.4 Create new job with new maven project template.
+	 30.5 Provide the code by GitHub repositories and create token secret key. (check)
+	 30.6 Activate GitHub Hook trigger for GITScm polling. (check)
+	 30.7 Configure Mave_Home in Jenkins and put in "Name" input the maven version. (check)
+	 30.8 Configure payload URL provided by Jenkins (In system configuration). (check)
+	 30.9 Install Ngrok and configure tunnel to use in GitHub payload URL. (check)
+	
+	31- Configure Selenium grid
+	 31.1 Download Selenium Jar and put in new folder created named "Grid". (check)
+	 31.2 Copy into grid folder the Chrome, Edge and Firefox drivers (geckodriver). (check) 
+	 31.3 Fix headless option of Selenium project to use with parameter and make this optional. (check) 
+	 33.4 Initialize local hub. (check) 
+	 34.5 Initialize local node. (check) 
+	 35.6 Create a new "SeleniumGrid" project. (check) 
+	 37.7 Create two java classes and implement class named "RemoteWebDriver" and send URI and capabilities arguments.  (check) 
+	 37.8 Convert to TestNG project. (check) 
+
+
 	  
 	  

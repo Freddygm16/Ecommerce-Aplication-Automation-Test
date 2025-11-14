@@ -53,23 +53,26 @@ public class BaseTest {
 		
 		//String browser = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
 
-		if (browser.equals("chrome")) {			
+		if (browser.contains("chrome")) {			
 		    ChromeOptions options = new ChromeOptions();
-		    options.addArguments("--headless=new");
-		    //options.addArguments("--disable-gpu");
-		    //options.addArguments("--window-size=2560, 1440");
-		    //options.addArguments("--no-sandbox");
-		    //options.addArguments("--disable-dev-shm-usage");
-		    //options.addArguments("--disable-animations");
+		    
+		    if (browser.contains("headless")) {
+		    	options.addArguments("--headless=new");
+			    //options.addArguments("--disable-gpu");
+			    //options.addArguments("--window-size=2560, 1440");
+			    //options.addArguments("--no-sandbox");
+			    //options.addArguments("--disable-dev-shm-usage");
+			    //options.addArguments("--disable-animations");
+		    } 
 
 		    WebDriver driver = new ChromeDriver(options);
 		    driver.manage().window().setSize(new Dimension(2560, 1440)); 
 		    threadDriver.set(ThreadGuard.protect(driver));
-		} else if (browser.equals("firefox")) {
+		} else if (browser.contains("firefox")) {
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")
 					+ "//src//src//test//java//freddycomapany//ecommerceaplication//TestsComponents//msedgedriver.exe");
 			threadDriver.set(ThreadGuard.protect(new FirefoxDriver()));
-		} else if (browser.equals("edge")) {
+		} else if (browser.contains("edge")) {
 			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")
 					+ "//src//src//test//java//freddycomapany//ecommerceaplication//TestsComponents//msedgedriver.exe");
 			threadDriver.set(ThreadGuard.protect(new EdgeDriver()));
