@@ -1,0 +1,26 @@
+TODO's:  
+
+1 - Begin a maven project. (check) 
+
+2 - Shared and write dependency apache poi oxml and poi to xml. (check)
+
+3 - Create excel file with data drivenmurl:C:\Users\Usuario\eclipse-workspace-test\ExcelDriven\src\main\resources\Book.xlsx (check)
+
+4 - Create object XSSFWorkbook, and get access to the sheet. (check)
+
+5 - Get access to all rows, and find the specified row and locate specific cell and get the value. (check)
+
+6 - Navigate to each column cells, find the purchase row, and print all cells with data in the row. (check)
+
+7 - Save the cells values in arraylist and Grab the code in a method that return this array list and parameterize (do this dinamically) the test case (row) that much extracts data from the XLSX file.  (check)
+
+8 - Fix the problem when I have a numeric value in the cell. How can I extract this value and put it into an ArrayList<String> (use NumberToTextConverter object)? (cheack)
+
+9 - Implementet the method finally pring all array returning data(check)
+
+10 - Create a test exapmple and implment data driver annotation link to test.
+
+11 - In the DataProvider create a method that read the excel obtaing the number of rows a and columns, them, 
+with these numbers create a array object with this dimentions.
+
+12 - Finally put the data in excel sheet to the multi dimensional array and pass to data provider. 
