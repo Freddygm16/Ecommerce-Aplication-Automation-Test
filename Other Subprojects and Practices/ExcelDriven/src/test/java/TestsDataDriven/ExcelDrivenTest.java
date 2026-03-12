@@ -7,13 +7,17 @@ import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.util.NumberToTextConverter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelDrivenTest {
-
+	static DataFormatter formatter = new DataFormatter();
+	
 	public static ArrayList<String> getData(String TestCaseName) throws IOException{
 		ArrayList<String> data = new ArrayList<String>();
 		
@@ -38,7 +42,7 @@ public class ExcelDrivenTest {
 				  
 				   //Cell value = cells.next();
 				   
-				   if(cells.next().getStringCellValue().equalsIgnoreCase(TestCaseName)) {
+				   if(cells.next().getStringCellValue().equalsIgnoreCase("TestCaseName")) {
 					  column = k; 
 					  break;
 				   }
@@ -51,7 +55,7 @@ public class ExcelDrivenTest {
 				   
 				   Row r = rows.next();
 				   
-				   if(r.getCell(column).getStringCellValue().equalsIgnoreCase("Purchase")) {
+				   if(r.getCell(column).getStringCellValue().equalsIgnoreCase(TestCaseName)) {
 					   
 					   Iterator<Cell> cellsPurchase = r.iterator();
 					
@@ -83,9 +87,32 @@ public class ExcelDrivenTest {
 	
 	public static void main(String[] args) throws IOException {
 		
-		for (String nombres : getData("TestCases")) {
-			System.out.println(nombres);
+//		for (String nombres : getData("TestCases")) {
+//			System.out.println(nombres);
+//		}
+		
+		
+		FileInputStream fls = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/Book.xlsx");
+		XSSFWorkbook workBook = new XSSFWorkbook(fls);
+		
+		XSSFSheet sheets = workBook.getSheetAt(0);
+		int numberRows = sheets.getPhysicalNumberOfRows();
+		XSSFRow row = sheets.getRow(0);
+		int numberColumns = row.getPhysicalNumberOfCells();
+		
+		Object data[][] = new Object[numberRows-1][numberColumns];
+		
+		for (int i = 1; i < numberRows - 1; i++) {
+			XSSFRow rowData = sheets.getRow(i);
+			for (int j=0; j < numberColumns; j++) {
+				XSSFCell cellData = rowData.getCell(j);
+				data[i][j] = formatter.formatCellValue(cellData);
+				System.out.println(data[i][j]);
+			}
 		}
+		
+		//return data;
+		
 		
 	}
 

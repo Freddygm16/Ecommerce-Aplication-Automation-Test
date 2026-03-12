@@ -16,11 +16,11 @@ TODO's:
 
 8 - Fix the problem when I have a numeric value in the cell. How can I extract this value and put it into an ArrayList<String> (use NumberToTextConverter object)? (cheack)
 
-9 - Implementet the method finally pring all array returning data(check)
+9 - Implementet the method finally pring all array returning data (check)
 
-10 - Create a test exapmple and implment data driver annotation link to test.
+10 - Create a test exapmple and implment data driver annotation link to test.(check)
 
-11 - In the DataProvider create a method that read the excel obtaing the number of rows a and columns, them, 
+11 - In the DataProvider create a method that read the excel obtaing the number of rows a and columns, them, (check)
 with these numbers create a array object with this dimentions.
 
-12 - Finally put the data in excel sheet to the multi dimensional array and pass to data provider. 
+12 - Finally put the data in excel sheet to the multi dimensional array and pass to data provider. (check)
