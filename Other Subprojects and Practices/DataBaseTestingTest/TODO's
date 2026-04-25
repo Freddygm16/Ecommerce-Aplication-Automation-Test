@@ -1,0 +1,11 @@
+/*
+TODO's:
+ 1. Create a maven project. (Check)
+ 2. Initialize myslq connection in the test with DriverMAnager object (Check)
+ 3. Create a new database in MySQL that has a table with credentials to access the application.(Check)
+ 4. Create a new database in MySQL that has a table with information, for example a name, and add a primary key.(Check)
+ 5. Create a statement with a Connection object.(Check)
+ 6. Execute a query with a Statement object that is received by the createStatement method of the Connection object; the query returns the credentials of one specific user.(Check)
+ 7. Print the credentials that are returned by the query in the ResultSet object..(Check)
+ 8. Finnally implement with selenium a test that access to next url:"https://test.salesforce.com/", and login with user and password obtain of the databases.(Check)
+*/

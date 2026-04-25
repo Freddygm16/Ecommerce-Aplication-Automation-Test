@@ -1,0 +1,7 @@
+TODO’s: 
+1-	Create a Java project, next convert this in maven project. (CHECK)
+2-	Initialize a driver.(CHECK)
+3-	Get dev tools of chromedriver, with getDevTools() method 
+4-	Create a session an use devtools with Emulation domain to manipulate the size of the page to convert in iphone dimensión use optional.empty() in the options not necessary in the method that allow this. 
+5-	And finally, click in a Library link. 
+6-	Create the same test but using only command directly with driver. Executecommands, and don’t use chromium.
