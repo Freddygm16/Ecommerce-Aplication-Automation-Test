@@ -40,7 +40,8 @@ public class AppTest {
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/upload-download-test/");
 
-		//Wiat elements appear and updated file xlsx
+		//Wait elements appear and updated file xlsx
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("fileinput")));
 		
@@ -83,7 +84,6 @@ public class AppTest {
 			if (fruitName.equalsIgnoreCase("Apple")) {
 				price = Double.parseDouble(webElement.findElement(By.cssSelector("#cell-4-undefined > div")).getText());
 			}
-			
 		}
 		
 		System.out.println(price);
@@ -95,18 +95,6 @@ public class AppTest {
 		String priceChar = driver.findElement(By.xpath("//div[text()=\"Apple\"]/parent::div/parent::div/div//div[text()='"+fruitName+"']/parent::div/parent::div/div[@id='cell-"+numberPrice+"-undefined']/div")).getText();
 		
 		System.out.println(priceChar);
-
-		
-		//TODO's 
-		/* 0- Retry the implementation of map the price of fruit using only xpath locators (Check)
-		 * 1- Created a method name's getNumberColumn that receive params filename and string with word "price"
-		 * 2- Created a method name's getNumberRow that receive params filename and string with word "Apple"
-		 * 3- Created a method name's UppdatedCell 
-		 * 4- This method will use to updated a cell with price in xlsx file to write with new price 599
-		 * */
-		
-		
-
 		
 		driver.quit();
 	}
