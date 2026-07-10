@@ -1,7 +1,14 @@
 TODO’s: 
 1-	Create a Java project, next convert this in maven project. (CHECK)
 2-	Initialize a driver.(CHECK)
-3-	Get dev tools of chromedriver, with getDevTools() method 
-4-	Create a session an use devtools with Emulation domain to manipulate the size of the page to convert in iphone dimensión use optional.empty() in the options not necessary in the method that allow this. 
-5-	And finally, click in a Library link. 
-6-	Create the same test but using only command directly with driver. Executecommands, and don’t use chromium.
+3-	Get dev tools of chromedriver, with getDevTools() method. (CHECK)
+4-	Create a session an use devtools object (send() method) with Emulation domain to manipulate the size of the page to convert 
+	in iphone dimensión use optional.empty() in the options not necessary in the method that allow this. (CHECK)
+5-	And finally, click in a Library link. (CHECK)
+6-	Create the same test but using only command directly with driver. Executecommands, and don’t use chromium. (CHECK)
+7- Crea un test de geolocalización primero, donde se asigne por medio de CDP commands la localización en Madrid. (CHECK)
+8- Ingresa primero a Google y, mediante la clase, entra a la página de Netflix (utilizando Keys.Enter). (CHECK)
+9- Usa la clase del link para acceder a Netflix, imprime la descripción principal y valida que esté en español. (CHECK)
+10- Posteriormente, cambia la localización y vuelve a ejecutar el test para validar que la descripción se muestre en inglés. (CHECK)
+11- Continuando, se debe crear un test que, mediante DevTools, rastree las llamadas a APIs, obteniendo la URL y el estatus de la respuesta,
+así como la URL de la solicitud GET/POST, etc. También se debe filtrar por un código de estado específico en la respuesta.CHECK)

@@ -1,17 +1,14 @@
 package Taks;
 
 import java.time.Duration;
-import java.util.Optional;
-
+import java.util.LinkedHashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v147.emulation.Emulation;
 import org.testng.annotations.Test;
 
-
-public class MobileDevToolsChromiumTest {
-
+public class MobileDevToolsCommandTest {
+	
 	@Test
 	public void MovileDevToolsTest() throws InterruptedException {
 
@@ -22,12 +19,16 @@ public class MobileDevToolsChromiumTest {
 		DevTools tools = driver.getDevTools();
 
 		tools.createSession();
-
-		tools.send(Emulation.setDeviceMetricsOverride(412, 915, 1, true, Optional.empty(), Optional.empty(),
-				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
-				Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty()));
-
-		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
+		
+        LinkedHashMap<String, Object> params = new LinkedHashMap<>();
+        params.put("width", 412);
+        params.put("height", 900);
+        params.put("deviceScaleFactor", 1);
+        params.put("mobile", true);
+        
+        driver.executeCdpCommand("Emulation.setDeviceMetricsOverride", params);
+		
+        driver.get("https://rahulshettyacademy.com/angularAppdemo/");
 		
 		driver.findElement(By.cssSelector("button[data-target=\"#navbarSupportedContent\"] > span")).click();
 
