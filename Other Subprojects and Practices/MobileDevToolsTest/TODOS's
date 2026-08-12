@@ -11,4 +11,8 @@ TODO’s:
 9- Usa la clase del link para acceder a Netflix, imprime la descripción principal y valida que esté en español. (CHECK)
 10- Posteriormente, cambia la localización y vuelve a ejecutar el test para validar que la descripción se muestre en inglés. (CHECK)
 11- Continuando, se debe crear un test que, mediante DevTools, rastree las llamadas a APIs, obteniendo la URL y el estatus de la respuesta,
-así como la URL de la solicitud GET/POST, etc. También se debe filtrar por un código de estado específico en la respuesta.CHECK)
+así como la URL de la solicitud GET/POST, etc. También se debe filtrar por un código de estado específico en la respuesta.(CHECK)
+12- Create a test that uses fetch object to mocking URL, and replace this to obtain less or more object JSON in request, 
+for example the URL request to obtain an amount of books that have a user, replace the URL to with the user have less books.(CHECK)
+14- Implement test that intercepts and cause faillrequest, and send error that cause this failed. CHECK)
+15- Block URL requests that fetch images or CSS from the network domain, validate them, and verify how to improve the speed test. CHECK)

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Taks.GeolocalizationTest">
+      <class name="Taks.BlockUrlsRequestsTest">
         <methods>
-          <include name="GeolocalizationTestRun"/>
+          <include name="BlockUrlsRequestsCase"/>
         </methods>
-      </class> <!-- Taks.GeolocalizationTest -->
+      </class> <!-- Taks.BlockUrlsRequestsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
