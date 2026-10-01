@@ -20,3 +20,12 @@ for example, the URL request to obtain an amount of books that a user has, repla
 16- Close the connection of the execution test with NETWORK domain, and validate the error message presented in the UI with NETWORK domain when executing the test.(CHECK)
 17- Create test that allow login in a site with popup login credentials requeried (Use HasAtuthetication.register interface).(CHECK)
 18- Create test that generate javascript error and get error generated in the console (Use DRIVEaRVER.MANAGE.LOG with LOGTYPE.BROWSER parameter). (CHECK)
+19- Login thorught windop pop up chrome browser use url paarameters oput in wbedriver.get method. (CHECK)
+20-Ingresar a una página para convertir un archivo Word a PDF utilizando AutoIt.(CHECK)
+21-Por medio del .exe generado por el script de AutoIt, subir el archivo.(CHECK)
+22-Luego dirigirse a la opción de descargar el archivo convertido.(CHECK)
+23-Finalmente, validar con la clase File si el archivo se descargó correctamente e imprimir "File found".(CHECK)
+24- Posteriormente utilizar direcciones dinamicas en la descarga del archivo, asi como en la lectura, colocando como carpeta predefinida el directorio del ejercicio
+y no la carpeta de descargas del sistema operativo como lo pone por defecto chrome.(CHECK)
+25- Por ultimo,. con un assert validar que el archivo existe efectivamente en la carpeta predefinida y no en la carpeta de descargas del sistema operativo. 
+e eliminar este con File.delete, y validar en el navegador que efectivamente se elimino el archivo.(CHECK)
